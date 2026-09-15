@@ -281,7 +281,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 
 		SET @batch_end_time = GETDATE();
 		PRINT '==================================';
-		PRINT 'Loading Bronze Layer is Completed'
+		PRINT 'Loading Silver Layer is Completed'
 		PRINT 'Total Load Duration: ' + CAST (DATEDIFF (second,@batch_start_time,@batch_end_time) AS NVARCHAR) + ' seconds';
 		PRINT '==================================';
 
