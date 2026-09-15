@@ -4,14 +4,14 @@ Create Database and Schemas
 =======================================================================================================
 
 Script Purpose:
-  This script creates a new database named 'DataWarehoseProject' after checking if it already exists.
-  If the database exists, it is dropped and recreated. Additionally, the script sets up three schemas
-  within the database: 'bronze', 'silver', 'gold'.
+    This script creates a new database named 'DataWarehoseProject' after checking if it already exists.
+    If the database exists, it is dropped and recreated. Additionally, the script sets up three schemas
+    within the database: 'bronze', 'silver', 'gold'.
 
 WARNING:
-  Running this script will drop the entire 'DataWarehoseProject' databse if it exists.
-  ALL data in the database will be pernamently deleted - proceed with caution 
-  and ensure you have proper backups before running this script.
+    Running this script will drop the entire 'DataWarehoseProject' databse if it exists.
+    ALL data in the database will be pernamently deleted - proceed with caution 
+    and ensure you have proper backups before running this script.
 =======================================================================================================
 */
 
