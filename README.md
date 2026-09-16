@@ -1,4 +1,4 @@
-Welcome to the Data Warehouse repository.
+Welcome to the Data Warehouse Project repository.
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a Data Warehouse 
 to genereting actionable insights. 
 
