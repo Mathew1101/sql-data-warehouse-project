@@ -19,7 +19,7 @@ Bronze Rules
 
 Silver Rules
 1. All names must start with the source system name and table names must match their original names without renaming
-2. <sourcesystem>_<entity>
+2. <source_system>_<entity>
     - <sourcesystem>: Name of the source system (e.g. cre, erp).
     - <entity>: Exact table name from source system.
     - Example: crm_customer_info -> Customer information from the CRM system.
