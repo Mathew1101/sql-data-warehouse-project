@@ -46,4 +46,4 @@ Technical Columns
 Stored Procedure:
 1. All stored procedures used for loading data must follow the naming pattern 'load_<layer>'.
     - <layer>: Represents the layer being loaded, such as  'bronze', 'silver', 'gold'.
-    - Example: load_silver ->
+    - Example: load_silver -> Procedure truncates 'silver' tables and inserts transformed and cleansed data from 'bronze' to 'silver'.
