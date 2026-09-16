@@ -6,9 +6,9 @@ General Principles
 2. Language: Use english for all names.
 3. Avoid Resered Words: Do not use SQL reserved words as object names.
 
--------------------
+-------------------------
 Table Naming Conventions
--------------------
+-------------------------
 
 Bronze Rules
 1. All names must start with the source system name and table names must match their original names without renaming.
