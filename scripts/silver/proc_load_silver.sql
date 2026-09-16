@@ -153,22 +153,22 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 			sls_ord_num,
 			sls_prd_key,
 			sls_cust_id,
-			CASE WHEN LEN(sls_order_dt) != 8 OR sls_order_dt = 0 THEN NULL
+			CASE WHEN LEN(sls_order_dt) != 8 OR sls_order_dt = 0 THEN NULL -- Cleaning Order Date
 				ELSE CAST(CAST(sls_order_dt AS NVARCHAR) AS DATE)
 			END AS sls_order_dt,
-			CASE WHEN LEN(sls_ship_dt) != 8 OR sls_ship_dt = 0 THEN NULL
+			CASE WHEN LEN(sls_ship_dt) != 8 OR sls_ship_dt = 0 THEN NULL -- Cleaning Shipping Date
 				ELSE CAST(CAST(sls_ship_dt AS NVARCHAR) AS DATE)
 			END AS sls_ship_dt,
-			CASE WHEN LEN(sls_due_dt) != 8 OR sls_due_dt = 0 THEN NULL
+			CASE WHEN LEN(sls_due_dt) != 8 OR sls_due_dt = 0 THEN NULL -- Cleaning Due Date
 				ELSE CAST(CAST(sls_due_dt AS NVARCHAR) AS DATE)
 			END AS sls_due_dt,
-			CASE 
+			CASE -- Cleaning Sales
 				WHEN sls_sales <= 0 OR sls_sales IS NULL OR  sls_sales != sls_quantity * ABS(sls_price)
 					THEN sls_quantity * ABS(sls_price)
 				ELSE sls_sales
 			END AS sls_sales,
 			sls_quantity, 
-			CASE 
+			CASE  -- Cleaning Price
 				WHEN sls_price <= 0 OR sls_price IS NULL 
 					THEN sls_sales / NULLIF(sls_quantity,0)
 				ELSE sls_price
@@ -202,7 +202,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 			gen
 		)
 		SELECT
-			CASE WHEN cid LIKE 'NAS%'
+			CASE WHEN cid LIKE 'NAS%' -- Removing Prefix
 				THEN SUBSTRING(cid,4,LEN(cid))
 				ELSE cid
 			END AS cid,
@@ -237,7 +237,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 		)
 		SELECT 
 			REPLACE(cid,'-','') AS cid,
-			CASE WHEN TRIM(cntry) = 'DE' THEN 'GERMANY'
+			CASE WHEN TRIM(cntry) = 'DE' THEN 'GERMANY' -- Cleaning Country Names
 				WHEN TRIM(cntry) IN ('USA','US') THEN 'United States'
 				WHEN TRIM(cntry) = '' OR TRIM(cntry) IS NULL THEN 'n/a'
 				ELSE TRIM(cntry)
