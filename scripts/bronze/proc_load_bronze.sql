@@ -12,6 +12,9 @@ Parameters:
     None.
     This stored procedure does not accept any parameters or return any values.
 
+Usage:
+	Files path must be changed before use.
+
 Usage Example:
     EXEC bronze.load_bronze;
 ======================================================================================
