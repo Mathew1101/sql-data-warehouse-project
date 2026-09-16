@@ -1,5 +1,4 @@
 CREATE VIEW gold.dim_customers AS
-(
 SELECT
 	ROW_NUMBER() OVER (ORDER BY ci.cst_id) AS customer_key,
 	ci.cst_id AS customer_id,
@@ -19,4 +18,3 @@ LEFT JOIN silver.erp_cust_az12 AS ca
 ON ci.cst_key = ca.cid
 LEFT JOIN silver.erp_loc_a101 AS cl
 ON ci.cst_key = cl.cid
-)
