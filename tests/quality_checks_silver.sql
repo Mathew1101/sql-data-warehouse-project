@@ -52,8 +52,8 @@ SELECT
     prd_id,
     COUNT(*)
 FROM silver.crm_prd_info
-GROUP BY cst_id
-HAVING COUNT(*) > 1 OR cst_id IS NULL;
+GROUP BY prd_id
+HAVING COUNT(*) > 1 OR prd_id IS NULL;
 
 -- Check for Unwanted Spaces
 -- Expectation: No Results
@@ -82,7 +82,7 @@ WHERE prd_start_dt > prd_end_dt;
 -- Expectation: No Results
 SELECT
     NULLIF(sls_due_dt, 0) AS sls_due_dt
-FROM silver.crm_sales_details
+FROM bronze.crm_sales_details
 WHERE sls_due_dt <= 0
     OR LEN(sls_due_dt) != 8 
     OR sls_due_dt > 20500101
@@ -150,9 +150,9 @@ SELECT
 FROM silver.erp_px_cat_g1v2
 WHERE cat != TRIM (cat)
     OR subcat != TRIM (subcat)
-    OR maintanance != TRIM (maintanance);
+    OR maintenance != TRIM (maintenance);
 
 -- Data Standarization & Costistency
 SELECT
-    maintanance
+    maintenance
 FROM silver.erp_px_cat_g1v2;
