@@ -25,7 +25,7 @@ CREATE OR ALTER VIEW gold.report_products AS
 
 WITH cte_prod_base AS
 (
--- Query retrives basic informations about products
+-- Query retrieves basic information about products
 SELECT
 	fs.order_number,
 	fs.order_date,
@@ -40,12 +40,12 @@ SELECT
 FROM gold.fact_sales AS fs 
 LEFT JOIN gold.dim_products AS dp
 ON fs.product_key = dp.product_key
-WHERE order_date IS NOT NULL -- Only consider valid sales date 
+WHERE order_date IS NOT NULL -- Only consider valid sales dates 
 ),
 
 cte_prod_aggregation AS
 (
--- Querry aggreates informations about products
+-- Query aggregates informations about products
 SELECT
 	product_key,
 	product_name,
