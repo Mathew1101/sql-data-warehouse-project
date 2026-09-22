@@ -40,7 +40,7 @@ BEGIN
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Truncating Table: bronze.crm_cust_info';
+		PRINT '>> Truncating  Table: bronze.crm_cust_info';
 
 		TRUNCATE TABLE bronze.crm_cust_info;
 
@@ -64,7 +64,7 @@ BEGIN
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Truncating Table: bronze.crm_prd_info';
+		PRINT '>> Truncating  Table: bronze.crm_prd_info';
 
 		TRUNCATE TABLE bronze.crm_prd_info;
 
@@ -88,7 +88,7 @@ BEGIN
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Truncating Table: bronze.crm_sales_details';
+		PRINT '>> Truncating  Table: bronze.crm_sales_details';
 
 		TRUNCATE TABLE bronze.crm_sales_details;
 
