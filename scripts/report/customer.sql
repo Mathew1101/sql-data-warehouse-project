@@ -25,7 +25,7 @@ CREATE OR ALTER VIEW gold.report_customers AS
 
 WITH cte_cust_base AS
 (
--- Query retrives basic informations about customers
+-- Query retrieves basic information about customers
 SELECT
 	fs.order_number,
 	fs.customer_key,
@@ -40,11 +40,11 @@ SELECT
 FROM gold.fact_sales AS fs
 LEFT JOIN gold.dim_customers AS dc
 ON fs.customer_key = dc.customer_key
-WHERE order_date IS NOT NULL -- Only consider valid sales date 
+WHERE order_date IS NOT NULL -- Only consider valid sales dates
 ),
 cte_cust_aggregation AS
 (
--- Querry aggreates informations about customers
+-- Query aggregates information about customers
 SELECT
 	customer_key,
 	customer_number,
