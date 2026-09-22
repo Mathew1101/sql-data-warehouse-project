@@ -131,7 +131,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Turncating Table: silver.crm_sales_details';
+		PRINT '>> Truncating Table: silver.crm_sales_details';
 
 		TRUNCATE TABLE silver.crm_sales_details;
 
@@ -189,7 +189,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Turncating Table: silver.erp_cust_az12';
+		PRINT '>> Truncating Table: silver.erp_cust_az12';
 
 		TRUNCATE TABLE silver.erp_cust_az12;
 
@@ -224,7 +224,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Turncating Table: silver.erp_loc_a101';
+		PRINT '>> Truncating Table: silver.erp_loc_a101';
 
 		TRUNCATE TABLE silver.erp_loc_a101;
 
@@ -253,7 +253,7 @@ DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @b
 		SET @start_time = GETDATE();
 
 		PRINT '';
-		PRINT '>> Turncating Table: silver.erp_px_cat_g1v2';
+		PRINT '>> Truncating Table: silver.erp_px_cat_g1v2';
 
 		TRUNCATE TABLE silver.erp_px_cat_g1v2;
 
