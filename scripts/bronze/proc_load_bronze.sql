@@ -13,7 +13,8 @@ Parameters:
     This stored procedure does not accept any parameters or return any values.
 
 Usage:
-	Files path must be changed before use.
+	Before executing bronze.load_bronze, update the BULK INSERT file paths 
+	in proc_load_bronze.sql to match your local dataset location.
 
 Usage Example:
     EXEC bronze.load_bronze;
